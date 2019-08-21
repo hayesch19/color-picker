@@ -37,6 +37,7 @@ class ColorSelector extends Component {
       saturation: Math.floor(Math.random() * 100),
       lightness: Math.floor(Math.random() * 100)
     })
+    console.log('NewRandomColor')
   }
 
   render() {
@@ -59,7 +60,7 @@ class ColorSelector extends Component {
               className="hue"
               type="range"
               min="1"
-              max="240"
+              max="360"
               value={this.state.hue}
               onChange={this.setHueInput}
             />
@@ -87,7 +88,7 @@ class ColorSelector extends Component {
               this.state.lightness
             }%)`}
           </h3>
-          <button className="random-color-btn" onClick={this.randomColor}>
+          <button className="hover" onClick={this.randomColor}>
             Get A Random Color
           </button>
         </div>
